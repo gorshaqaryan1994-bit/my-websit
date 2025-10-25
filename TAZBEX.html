@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITAN CRAFT (Full Width)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* ????????? ????????? */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* ??? ?????????? ??? */
+            /* ????????????? ??????? ? Full Width ????? ????? */
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            min-height: 100vh;
+        }
+
+        /* ????????? - ?????? ??????? */
+        .site-container {
+            width: 100%; /* ?????? ??????????? */
+            max-width: 100%;
+            background-color: #000000;
+            color: #ffffff;
+            /* ???????? ??? ????????????? max-width-? ??????? (??? ????????? ????????????) ??? ??????? ??????? 100% */
+            margin: 0 auto; 
+            box-shadow: none; /* ?????? ??? box-shadow-?, ???? ?? ??? ?????????? ?? ???????? ????? ????? */
+            padding: 20px 5%; /* ??????? ??? 5% ?????? ??????? ???? ? ????? */
+            border-radius: 0; /* ?????? ??? ??????????? */
+            box-sizing: border-box; /* ??????? padding-? ???????? width-? 100%-?? ???? */
+        }
+
+        /* ??????? (HEADER) - FLEXBOX */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #333;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        
+        /* ????????? - FLEXBOX (????????????) */
+        .main-nav {
+            display: flex;
+            gap: 25px;
+            position: absolute; 
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .main-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            padding: 10px 0;
+        }
+
+        .icons {
+            display: flex;
+            gap: 15px;
+            font-size: 16px;
+        }
+
+        .icons i {
+            cursor: pointer;
+            color: #999; 
+        }
+
+        /* ?????????? ???? - FLEXBOX */
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between; 
+            padding: 30px 0;
+            gap: 20px 0; 
+        }
+
+        .product-card {
+            /* ???????????? ??????? ?, ??????? ????? ???? ?????? ?????? ????? */
+            flex: 0 0 calc(33.333% - 15px); /* 33.333% - ???????? 3 ??????? (15px-? ???????? ?????) */
+            max-width: calc(33.333% - 15px); 
+            text-align: left;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto; /* ????? ????? ????????? ????? */
+            aspect-ratio: 1 / 1; /* ??????? ????????? ? ????????? ????? */
+            object-fit: cover; 
+            display: block;
+        }
+
+        .product-info {
+            padding: 10px 0;
+        }
+
+        .product-info .name {
+            font-size: 14px;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .product-info .price {
+            font-size: 14px;
+            margin: 5px 0 0 0;
+            color: #aaaaaa; 
+        }
+
+        /* ???????? ??? (FOOTER) - FLEXBOX */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0 10px 0;
+            border-top: 1px solid #333;
+            font-size: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 50px;
+        }
+.footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            font-size: 14px;
+        }
+        
+        .social-icons i {
+             color: #ffffff; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="site-container">
+        <header class="header">
+            <div class="logo">TITAN CRAFT</div>
+            <nav class="main-nav">
+                <a href="#">NECKALEES</a>
+                <a href="#">BRACELETS</a>
+                <a href="#">RINGS</a>
+                <a href="#">COLLECTIONS</a>
+            </nav>
+            <div class="icons">
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-search"></i>
+            </div>
+        </header>
+
+        <main class="product-grid">
+            <div class="product-card">
+                <img src="product1.jpg" alt="Titanium Chain Necklace"> 
+                <div class="product-info">
+                    <p class="name">Titanium Chain Necklace</p>
+                    <p class="price">$120</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="product2.jpg" alt="Bloan Chain Necklace">
+                <div class="product-info">
+                    <p class="name">Bloan Chain Necklace</p>
+                    <p class="price">$120</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="product3.jpg" alt="Watche - Watch">
+                <div class="product-info">
+                    <p class="name">Watche - Watch</p>
+                    <p class="price">$150</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="product4.jpg" alt="Titanium Chain Necklace (Skull)">
+                <div class="product-info">
+                    <p class="name">Titanium Chain Necklace</p>
+                    <p class="price">$120</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="product5.jpg" alt="Black Chronograph Watch">
+                <div class="product-info">
+                    <p class="name">Black Chronograph Watch</p>
+                    <p class="price">$250</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="product6.jpg" alt="Black Chronograph Watch (Copper)">
+                <div class="product-info">
+                    <p class="name">Black Chronograph Watch</p>
+                    <p class="price">$250</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="social-icons">
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-square-d"></i> 
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
